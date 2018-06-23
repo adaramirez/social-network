@@ -1,3 +1,19 @@
-.category-backpacker-turist{
+/* home */
+
+/* home/post */
+
+#browse-img {
+    display: none;
+}
+
+#label-browse-img {
+    /* line-height: 16px;
+    padding: .2em .4em;
+    margin: .2em; */
+}
+
+/* friends */
+
+.category-backpacker-turist {
     font-size: .7rem;
 }

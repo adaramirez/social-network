@@ -43,12 +43,19 @@
                 <div class="post container">
                     <br>
                     <textarea class="form-control mb-1" id="exampleFormControlTextarea1" rows="1" placeholder="Say something..."></textarea>
-                    <button type="button" class="btn btn-primary btn-sm">Photo</button>
+                    <div class="custom-file">
+                       <input type="file" class="" id="browse-img">
+                       <label class=" btn-sm btn-primary" for="browse-img" id="label-browse-img">Photo</label>
+                     </div>
+                    <!-- <input type="file" class="btn btn-primary btn-sm" id="imgInp">     -->
                     <button type="button" class="btn btn-primary btn-sm">Post</button>
                 </div>
                 <!-- post cards -->
                 <div class="container mt-2">
-                    <img class="card card-img-top" src="assets/images/mexican.png" alt="Card image cap">
+                    <img class="card card-img-top" src="assets/images/mexican.png" alt="Card image cap" id='img-upload'>
+                    <div class="card-body text-center" id="comments-container">
+
+                    </div>
                     <div class="card-body text-right">
                         <a href="#"> <i class="fas fa-heart"></i> </a>
                         <a href="#"> <i class="fas fa-comment"></i> </a>
