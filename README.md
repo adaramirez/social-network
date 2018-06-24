@@ -6,6 +6,7 @@
 * **Module:** 6 Make Your Own Social Network
 
 ABOUT THE FINAL PROJECT
+
 Instagram, Snapchat, Twitter, Facebook, Twitch, Linkedin, the social networks have invaded our lives. We love them, we hate them, we idolize  them and many of us can not live without them. Given this context, a very visionary entrepreneur has commissioned us to create a social network. He does not give us much detail about what kind of social network he wants, he only tells us that we have to create the best we can and then we can convince him that our social network will be the most successful.
 
 ---
@@ -43,6 +44,27 @@ How many times have we heard  "*I don't travel because I don't have money*"? or 
 * **LOGO DESIGNS** 
 
 ![alt text](assets/images/mexican.png)
+
+
+### How does the tourism impact the economy?
+````
+According to OECD, Tourism is a national priority in Mexico as it generates direct and indirect jobs, as well
+as foreign currency receipts and economic growth. Tourism also promotes regional
+development and productive chains, in addition to improving quality of life for families
+and communities. It contributes 8.4% of Mexico’s GDP, is the fourth largest source of export
+revenues, and creates around 2.5 million direct and 5 million indirect jobs.
+Domestic tourism represents more than 80% of tourism in the country, mostly
+generated in regions/municipalities that do not receive important international flows.
+
+Mexico has a diversity of tourism products, offering more than 40 000 archaeological
+sites (almost 200 of which are open to the public); 62 ethnic groups; 38World Heritage Sites;
+83 Pueblos Mágicos (Magical Towns); 10 Rutas de México (recognised tourist routes); 14 AAA
+– 5 diamond hotels and 637 000 hotel rooms; 50 world-class golf courses; the world’s
+leading port in cruise ship arrivals (Cozumel); and world-class facilities for meetings and
+conventions. Mexico’s gastronomy and mariachi were named Intangible Cultural Heritage
+of Humanity by UNESCO.
+
+````
 
 
 
