@@ -10,3 +10,26 @@
 .category-backpacker-turist {
     font-size: .7rem;
 }
+
+
+/* Common style for all views */
+header.container-fluid {
+    background-image: url(../assets/images/style/top.jpg);
+    background-size: 100% 100%;
+}
+
+a.nav-item.nav-link{
+    color: white;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    background-image: url(../assets/images/style/bottom.jpg);
+    background-size: 100% 100%;
+    color: white;
+    text-align: center;
+}
+

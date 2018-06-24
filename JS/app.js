@@ -11,10 +11,10 @@ firebase.initializeApp(config);
 
 var dbFB = firebase.database().ref().child('post');
 
-// upload image posting
+// upload image to post
 $(document).ready(function() {
 
-    // atributo de la ruta de la imagen
+    // attribute for the image route
     function browseImage(inputPhoto) {
         if (inputPhoto.files && inputPhoto.files[0]) {
             var reader = new FileReader();
@@ -29,3 +29,4 @@ $(document).ready(function() {
         browseImage(this);
     });
 });
+
