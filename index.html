@@ -4,15 +4,20 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <!-- bootstrap -->
     <link rel="stylesheet" href="css/assets/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
     <title>SOCIAL NETWORK</title>
 </head>
 
 <body>
+
     <header class="container-fluid">
         <nav class="nav nav-pills nav-justified">
-            <a class="nav-item nav-link" href="#">Profile</a>
+            <a class="nav-item nav-link" href="#"><img class="img-fluid rounded-circle" src="assets/images/profile.png" alt=""></a>
+            <a class="nav-item nav-link" href="#">Name</a>
             <a class="nav-item nav-link" href="#">Icon</a>
             <a class="nav-item nav-link" href="#">Mochilero</a>
         </nav>
@@ -21,21 +26,69 @@
     <main class="container-fluid">
         <ul class="nav nav-tabs" id="myTab" role="tablist">
             <li class="nav-item">
-                <a class="nav-link" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="false">Home</a>
+                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
+                <a class="nav-link" id="friends-tab" data-toggle="tab" href="#friends" role="tab" aria-controls="friends" aria-selected="false">Friends</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
+                <a class="nav-link" id="travel-tab" data-toggle="tab" href="#travel" role="tab" aria-controls="travel" aria-selected="false">Travel</a>
             </li>
         </ul>
-        <div class="tab-content" id="myTabContent">
-            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div>
-            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
-            <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
-        </div>
 
+        <!-- div contents the diferents views -->
+        <div class="tab-content" id="myTabContent">
+            <!-- home -->
+            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                <!-- post something -->
+                <div class="post container">
+                    <!-- preview image -->
+                    <div class="">
+                        <p>Image</p>
+                        <img class="col-2 border-0" id="img-upload">
+                    </div>
+                    <!-- post -->
+                    <textarea class="form-control mb-1" id="exampleFormControlTextarea1" rows="1" placeholder="Say something..."></textarea>
+                        <div class="custom-file btn-sm btn-primary col-3 text-center mt-1">
+                           <input type="file" class="" id="browse-img">
+                           <label class="col-12 mt-1 mb-0" for="browse-img" id="label-browse-img">Photo</label>
+                         </div>
+                        <button type="button" class="btn btn-primary btn" id="post">Post</button>
+                </div>
+                <!-- post cards -->
+                <div class="container mt-2">
+                    <img class="card card-img-top" src="assets/images/mexican.png" alt="Card image cap">
+                    <div class="card-body text-center" id="comments-container">
+
+                    </div>
+                    <div class="card-body text-right">
+                        <a href="#"> <i class="fas fa-heart"></i> </a>
+                        <a href="#"> <i class="fas fa-comment"></i> </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade container" id="friends" role="tabpanel" aria-labelledby="friends-tab">
+                <h4 class="text-right">Friends: 0</h4>
+                <!-- cards friend's information -->
+                <div class="row">
+                    <div class="card mt-2 mr-3 ml-3 col-5 text-right">
+                        <a class="mt-2" href="#"> <i class="fas fa-times-circle"></i></a>
+                        <img class="rounded-circle card-img-top" src="assets/images/profile.png" alt="Card image cap">
+                        <hr>
+                        <div class="card-body p-0 text-left">
+                            <a href="#"> <i class="fas fa-envelope"></i> </a>
+                            <a href="tel:+523318894178"> <i class="fas fa-phone"></i></a>
+                            <div class="row">
+                                <h5 class="card-text">Nombre</h5>
+                                <p class="category-backpacker-turist ml-3 mt-2">Backpacker</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="travel" role="tabpanel" aria-labelledby="travel-tab">...</div>
+        </div>
     </main>
 
 
@@ -45,6 +98,8 @@
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
+    <!-- firebase -->
+    <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase.js"></script>
     <!-- bootstrap js -->
     <script type="text/javascript" src="js/assets/bootstrap.min.js"></script>
 
