@@ -13,6 +13,7 @@
 </head>
 
 <body>
+
     <header class="container-fluid">
         <nav class="nav nav-pills nav-justified">
             <a class="nav-item nav-link" href="#"><img class="img-fluid rounded-circle" src="assets/images/profile.png" alt=""></a>
@@ -41,18 +42,22 @@
             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                 <!-- post something -->
                 <div class="post container">
-                    <br>
+                    <!-- preview image -->
+                    <div class="">
+                        <p>Image</p>
+                        <img class="col-2 border-0" id="img-upload">
+                    </div>
+                    <!-- post -->
                     <textarea class="form-control mb-1" id="exampleFormControlTextarea1" rows="1" placeholder="Say something..."></textarea>
-                    <div class="custom-file">
-                       <input type="file" class="" id="browse-img">
-                       <label class=" btn-sm btn-primary" for="browse-img" id="label-browse-img">Photo</label>
-                     </div>
-                    <!-- <input type="file" class="btn btn-primary btn-sm" id="imgInp">     -->
-                    <button type="button" class="btn btn-primary btn-sm">Post</button>
+                        <div class="custom-file btn-sm btn-primary col-3 text-center mt-1">
+                           <input type="file" class="" id="browse-img">
+                           <label class="col-12 mt-1 mb-0" for="browse-img" id="label-browse-img">Photo</label>
+                         </div>
+                        <button type="button" class="btn btn-primary btn" id="post">Post</button>
                 </div>
                 <!-- post cards -->
                 <div class="container mt-2">
-                    <img class="card card-img-top" src="assets/images/mexican.png" alt="Card image cap" id='img-upload'>
+                    <img class="card card-img-top" src="assets/images/mexican.png" alt="Card image cap">
                     <div class="card-body text-center" id="comments-container">
 
                     </div>
