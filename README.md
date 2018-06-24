@@ -1,4 +1,4 @@
-![alt text](assets/images/cover.jpg)
+![alt text](assets/images/readme/cover.jpg)
 
 # SOCIAL NETWORK - MEX I CAN 
 
@@ -37,19 +37,26 @@ How many times have we heard  "*I don't travel because I don't have money*"? or 
 * [Prototype with animation](https://xd.adobe.com/view/a209cdec-58f7-4f96-584e-a95dbd954be1-d438/?fullscreen)
 
 
+
 * **COLOR PALETTE** Used to design the prototype
 
-![alt text](assets/images/colorPalette.jpg)
+![alt text](assets/images/readme/colorPalette.jpg)
+
+![alt text](assets/images/readme/one.png)
+![alt text](assets/images/readme/two.png)
+![alt text](assets/images/readme/three.png)
+![alt text](assets/images/readme/four.png)
+![alt text](assets/images/readme/five.png)
 
 * **LOGO DESIGNS** 
 
-![alt text](assets/images/mexican.png)
+![alt text](assets/images/readme/mexican.png)
 
 
 ### How does the tourism impact the economy?
 ````
-According to OECD, Tourism is a national priority in Mexico as it generates direct and indirect jobs, as well
-as foreign currency receipts and economic growth. Tourism also promotes regional
+According to OECD, Tourism is a national priority in Mexico as it generates direct and indirect jobs, 
+as well as foreign currency receipts and economic growth. Tourism also promotes regional
 development and productive chains, in addition to improving quality of life for families
 and communities. It contributes 8.4% of Mexico’s GDP, is the fourth largest source of export
 revenues, and creates around 2.5 million direct and 5 million indirect jobs.
