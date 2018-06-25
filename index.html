@@ -61,11 +61,11 @@
                             </div>
                             <div class="modal-body">
                                 <textarea class="form-control mb-1" rows="1" placeholder="Say something..."></textarea>
-                                <div class="custom-file btn-sm btn-primary col-3 text-center mt-1">
+                                <div class="custom-file btn-sm btn col-3 text-center mt-1">
                                     <input type="file" class="" id="browse-img">
                                     <label class="col-12 mt-1 mb-0" for="browse-img" id="label-browse-img">Photo</label>
                                 </div>
-                                <button type="button" class="btn btn-primary btn" id="post">Post</button>
+                                <button type="button" class="btn btn btn" id="post">Post</button>
                                 <img class="col-9 border-0" id="img-upload">
                             </div>
                         </div>
@@ -81,7 +81,7 @@
                         <a href="#" id="icon-heart">
                             <i class="fas fa-heart"></i>
                         </a>
-                        <a href="#" id="icon-comment" data-toggle="modal" data-tar>
+                        <a href="#" id="icon-comment" data-toggle="modal" data-target="#myModal">
                             <i class="fas fa-comment"></i>
                         </a>
                     </div>
@@ -125,6 +125,35 @@
         <p>Copyright © MexIcan 2018</p>
         
     </footer> -->
+
+    <!--MODALS-->
+    <!--Modal to comment the picture/text posted-->
+    <div class="modal" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!--Modal Header-->
+                <div class="modal-header">
+                    <h5>name</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                
+                <!--Modal body-->
+
+                <div id="post-section" class="modal-body">
+                    <div class="form-group">
+                        <textarea class="form-control" rows="2" id="comment" name="text" placeholder="What are you thinking?"></textarea>
+                    </div>
+                </div>
+
+                <!--Modal footer-->
+                <div class="modal-footer">
+                    <button id="add-button" type="submit" class="btn btn-danger" data-dismiss="modal">Add</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
 
     <!--If it is needed delete the files and add boostrap CDN to go to procution-->
