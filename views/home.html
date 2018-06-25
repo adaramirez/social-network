@@ -5,8 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- fontawesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
     <!-- bootstrap -->
     <link rel="stylesheet" href="../css/assets/bootstrap.min.css">
     <link rel="stylesheet" href="../css/main.css">
@@ -17,9 +16,9 @@
     <header class="container-fluid">
         <nav class="nav nav-pills nav-justified">
             <a class="nav-item nav-link" href="#">
-                <img class="img-fluid rounded-circle" src="../assets/images/profile.png" alt="" id="profile-photo">
+                
             </a>
-            <a class="nav-item nav-link" href="#">Name</a>
+            <a class="nav-item nav-link" href="#" id="nameUser">Name</a>
             <a class="nav-item nav-link" href="#">Logo </a>
             <a class="nav-item nav-link" href="#">Backpacker</a>
         </nav>
@@ -45,8 +44,7 @@
                 <!-- post something -->
                 <div class="post container">
                     <!-- post -->
-                    <textarea class="form-control mt-2 mb-1" type="button" placeholder="Post something..." rows="1" data-toggle="modal" data-target="#modal-port-something"
-                        id="post-something"></textarea>
+                    <textarea class="form-control mt-2 mb-1" type="button" placeholder="Post something..." rows="1" data-toggle="modal" data-target="#modal-port-something" id="post-something"></textarea>
                 </div>
                 <!-- cards section -->
                 <div class="card-post-container" id="card-post-cont">
@@ -64,7 +62,9 @@
                         <a class="mt-2" href="#">
                             <i class="fas fa-times-circle"></i>
                         </a>
-                        <img class="rounded-circle card-img-top" src="../assets/images/profile.png" alt="Card image cap">
+                        <a href="#" id="cont-photo-profile">
+                            <img class="rounded-circle card-img-top" src="../assets/images/profile.png" alt="Card image cap" id="profile-photo">
+                        </a>
                         <hr>
                         <div class="card-body p-0 text-left">
                             <a href="#">
@@ -74,7 +74,7 @@
                                 <i class="fas fa-phone"></i>
                             </a>
                             <div class="row">
-                                <h5 class="card-text">Nombre</h5>
+                                <h5 class="card-text" id="nameUser">Name</h5>
                                 <p class="category-backpacker-turist ml-3 mt-2">Backpacker</p>
                             </div>
                         </div>
@@ -101,7 +101,7 @@
 
                 <!--Modal Header-->
                 <div class="modal-header">
-                    <h5>name</h5>
+                    <h5 id="nameUser">name</h5>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
 
