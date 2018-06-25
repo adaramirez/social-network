@@ -4,7 +4,7 @@ var config = {
     authDomain: "social-network-turism.firebaseapp.com",
     databaseURL: "https://social-network-turism.firebaseio.com",
     projectId: "social-network-turism",
-    storageBucket: "",
+    storageBucket: "social-network-turism.appspot.com",
     messagingSenderId: "162849485241"
 };
 firebase.initializeApp(config);

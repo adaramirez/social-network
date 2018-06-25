@@ -45,29 +45,43 @@
             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                 <!-- post something -->
                 <div class="post container">
-                    <!-- preview image -->
-                    <div class="">
-                        <p>Image</p>
-                        <img class="col-2 border-0" id="img-upload">
-                    </div>
                     <!-- post -->
-                    <textarea class="form-control mb-1" id="exampleFormControlTextarea1" rows="1" placeholder="Say something..."></textarea>
-                    <div class="custom-file btn-sm btn btn col-3 text-center mt-1">
-                        <input type="file" class="" id="browse-img">
-                        <label class="col-12 mt-1 mb-0" for="browse-img" id="label-browse-img">Photo</label>
-                    </div>
-                    <button type="button" class="btn btn btn" id="post">Post</button>
+                    <textarea class="form-control mt-2 mb-1" type="button" placeholder="Post something..." rows="1" data-toggle="modal" data-target="#modal-port-something"
+                        id="post-something"></textarea>
                 </div>
+                <!-- post something/modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modal-port-something">Post something...</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <textarea class="form-control mb-1" rows="1" placeholder="Say something..."></textarea>
+                                <div class="custom-file btn-sm btn-primary col-3 text-center mt-1">
+                                    <input type="file" class="" id="browse-img">
+                                    <label class="col-12 mt-1 mb-0" for="browse-img" id="label-browse-img">Photo</label>
+                                </div>
+                                <button type="button" class="btn btn-primary btn" id="post">Post</button>
+                                <img class="col-9 border-0" id="img-upload">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
                 <!-- post cards -->
                 <div class="container mt-2">
                     <img class="card card-img-top" src="assets/images/readme/mexican.png" alt="Card image cap">
                     
                     </div>
                     <div class="card-body text-right">
-                        <a href="#">
+                        <a href="#" id="icon-heart">
                             <i class="fas fa-heart"></i>
                         </a>
-                        <a href="#" data-toggle="modal" data-target="#myModal">
+                        <a href="#" id="icon-comment" data-toggle="modal" data-tar>
                             <i class="fas fa-comment"></i>
                         </a>
                     </div>
