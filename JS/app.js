@@ -30,6 +30,10 @@ $(document).ready(function() {
 
     // post button
     $("#post").click(getDataPost);
+
+
+    $("#add-button").click(getCommentPost);
+    
 });
 
 // post's variables
@@ -49,9 +53,8 @@ var templateCard =  '<div class="card container mb-2 mt-2">' +
                                 '<i class="fas fa-comment"></i>' +
                             '</a>' +
                         '</div>' +
-                        '<span id="description-photo" class="font-weight-bold">__description__</span>'
-                        '<div class="container" id="comments-container">' +
-                        '</div>' +
+                        '<span id="description-photo" class="font-weight-bold">__description__</span>'+
+                        '<div class="container" id="comments-container"></div>' +
                     '</div>';
 
 function getDataPost(){
@@ -73,9 +76,7 @@ function addPost (description,srcPost){
 
 //------------------------------------------
 
-$(document).ready(function(){
-    $("#icon-comment").click(getCommentPost)
-});
+
 
 var templateComment =   '<nav class="col-6 nav nav-pills nav-justified">' +
                             '<a class="col-4 nav-item nav-link" href="#">' +
@@ -100,13 +101,13 @@ function getCommentPost(){
     addComment(comment);
 
     $("#modal-comment").val("");
-}
+};
 
 function addComment (comment){
     var lastTemplate = "";
     lastTemplate = templateComment.replace("__comment__", comment);
     $('#comments-container').append(lastTemplate);
-}
+};
   
 
 
