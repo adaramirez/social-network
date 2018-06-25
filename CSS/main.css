@@ -1,6 +1,24 @@
+/* splash */
+
+#bk-splash {
+    /* background-image: url(../assets/images/readme/mexican.png);
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover; */
+    width: 100%;
+    position: absolute;
+    top: 4em;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+}
+
+
 /* home */
 
 /* home/post */
+
 #browse-img {
     display: none;
 }
@@ -11,14 +29,14 @@
     font-size: .7rem;
 }
 
-
 /* Common style for all views */
+
 header.container-fluid {
     background-image: url(../assets/images/style/top.jpg);
     background-size: 100% 100%;
 }
 
-a.nav-item.nav-link{
+a.nav-item.nav-link {
     color: white;
 }
 
@@ -34,41 +52,43 @@ a.nav-item.nav-link{
 }
 
 /* buttons for photo and post */
+
 .btn {
-    background-color:#e2318b;
+    background-color: #e2318b;
 }
 
 /* navbar options  */
-#home-tab{
+
+#home-tab {
     color: black;
 }
 
-#home-tab:hover{
+#home-tab:hover {
     background-color: #ccce01;
     color: white;
 }
 
-#friends-tab{
+#friends-tab {
     color: black;
 }
 
-#friends-tab:hover{
+#friends-tab:hover {
     background-color: #52bfd3;
     color: white;
 }
 
-#travel-tab{
-    color:black;
+#travel-tab {
+    color: black;
 }
 
-#travel-tab:hover{
+#travel-tab:hover {
     background-color: #fcc513;
     color: white;
 }
+
 
 div#id_new.container{
     border: 1px solid rgb(224, 224, 224);
     border-radius: 10px;
     margin: 2px;
 }
-

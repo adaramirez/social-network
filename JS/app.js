@@ -11,6 +11,22 @@ firebase.initializeApp(config);
 
 var dbFB = firebase.database().ref().child('post');
 
+// autenticacion
+var provider = new firebase.auth.GoogleAuthProvider();
+// src dominios autorizados https://stackoverflow.com/questions/48076968/firebase-auth-unauthorized-domain-domain-is-not-authorized
+$('#btn-google').click(function() {
+    firebase.auth()
+        .signInWithPopup(provider)
+        .then(function(result) {
+            var infoUser = result.user;
+            console.log(result.user);
+
+            window.location.href = "../index.html"
+        })
+});
+
+
+
 $(document).ready(function() {
     // upload image to post
     // attribute for the image route
@@ -32,9 +48,6 @@ $(document).ready(function() {
     $("#post").click(getDataPost);
 
 
-    $("#add-button").click(getCommentPost);
-    
-});
 
 // post's variables
 var templateCard =  '<div class="card container mb-2 mt-2">' +
@@ -60,22 +73,19 @@ var templateCard =  '<div class="card container mb-2 mt-2">' +
 function getDataPost(){
     var description = $("#modal-description").val();
     var srcPost = $("#img-upload").attr('src');
-    addPost (description,srcPost);
+    addPost(description, srcPost);
 
     $("#modal-description").val("");
-    $("#img-upload").attr('src',"");
+    $("#img-upload").attr('src', "");
 }
 
-function addPost (description,srcPost){
+function addPost(description, srcPost) {
     var finalTemplate = "";
-    finalTemplate = templateCard.replace("__image-post__",srcPost)
-                                .replace("__description__",description);
+    finalTemplate = templateCard.replace("__image-post__", srcPost)
+        .replace("__description__", description);
     $('#card-post-cont').append(finalTemplate);
     // swal("YEI!", "Contact added!", "success");
 }
-
-//------------------------------------------
-
 
 
 var templateComment =   '<nav class="col-6 nav nav-pills nav-justified">' +
@@ -138,14 +148,6 @@ function deleteComment(){
 
     container.remove();
 }
-
-
-
-
-
-  
-
-
 
 
 
