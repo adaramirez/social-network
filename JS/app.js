@@ -11,9 +11,10 @@ firebase.initializeApp(config);
 
 var dbFB = firebase.database().ref().child('post');
 
-// upload image to post
-$(document).ready(function() {
 
+
+$(document).ready(function() {
+    // upload image to post
     // attribute for the image route
     function browseImage(inputPhoto) {
         if (inputPhoto.files && inputPhoto.files[0]) {
@@ -24,10 +25,50 @@ $(document).ready(function() {
             reader.readAsDataURL(inputPhoto.files[0]);
         }
     }
-
+    //show the picture
     $("#browse-img").change(function() {
         browseImage(this);
     });
+
+    // post button
+    $("#post").click(getDataPost);
 });
 
+// post's varibles
+var templateCard =  '<div class="card container mb-2 mt-2">' +
+                        '<nav class="col-6 nav nav-pills nav-justified">'+
+                            '<a class="col-4 nav-item nav-link" href="#">'+
+                                '<img class="img-fluid rounded-circle" src="assets/images/profile.png" alt="" id="profile-photo">'+
+                            '</a>'+
+                            '<a class="nav-item nav-link text-dark" href="#">Name</a>'+
+                        '</nav>'+
+                        '<img class="card card-img-top" src="__image-post__" alt="Card image cap">' +
+                        '<div class="card-body text-right">' +
+                            '<a href="#" id="icon-heart">' +
+                                '<i class="fas fa-heart"></i>' +
+                            '</a>' +
+                            '<a href="#" id="icon-comment" data-toggle="modal" data-tar>' +
+                                '<i class="fas fa-comment"></i>' +
+                            '</a>' +
+                        '</div>' +
+                        '<span id="description-photo" class="font-weight-bold">__description__</span>'
+                        '<div class="text-center" id="comments-container">' +
+                        '</div>' +
+                    '</div>';
 
+function getDataPost(){
+    var description = $("#modal-description").val();
+    var srcPost = $("#img-upload").attr('src');
+    addPost (description,srcPost);
+
+    $("#modal-description").val("");
+    $("#img-upload").attr('src',"");
+}
+
+function addPost (description,srcPost){
+    var finalTemplate = "";
+    finalTemplate = templateCard.replace("__image-post__",srcPost)
+                                .replace("__description__",description);
+    $('main').append(finalTemplate);
+    // swal("YEI!", "Contact added!", "success");
+}
