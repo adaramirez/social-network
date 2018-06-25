@@ -21,7 +21,7 @@ $('#btn-google').click(function() {
             var infoUser = result.user;
             console.log(result.user);
 
-            window.location.href = "../index.html"
+            window.location.href = "../views/home.html"
         })
 });
 
