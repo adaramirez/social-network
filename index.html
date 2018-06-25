@@ -5,8 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- fontawesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
     <!-- bootstrap -->
     <link rel="stylesheet" href="css/assets/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
@@ -18,7 +17,7 @@
     <header class="container-fluid">
         <nav class="nav nav-pills nav-justified">
             <a class="nav-item nav-link" href="#">
-                <img class="img-fluid rounded-circle" src="assets/images/profile.png" alt="">
+                <img class="img-fluid rounded-circle" src="assets/images/profile.png" alt="" id="profile-photo">
             </a>
             <a class="nav-item nav-link" href="#">Name</a>
             <a class="nav-item nav-link" href="#">Logo </a>
@@ -46,48 +45,11 @@
                 <!-- post something -->
                 <div class="post container">
                     <!-- post -->
-                    <textarea class="form-control mt-2 mb-1" type="button" placeholder="Post something..." rows="1" data-toggle="modal" data-target="#modal-port-something"
-                        id="post-something"></textarea>
+                    <textarea class="form-control mt-2 mb-1" type="button" placeholder="Post something..." rows="1" data-toggle="modal" data-target="#modal-port-something" id="post-something"></textarea>
                 </div>
-                <!-- post something/modal -->
-                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="modal-port-something">Post something...</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <textarea class="form-control mb-1" rows="1" placeholder="Say something..."></textarea>
-                                <div class="custom-file btn-sm btn-primary col-3 text-center mt-1">
-                                    <input type="file" class="" id="browse-img">
-                                    <label class="col-12 mt-1 mb-0" for="browse-img" id="label-browse-img">Photo</label>
-                                </div>
-                                <button type="button" class="btn btn-primary btn" id="post">Post</button>
-                                <img class="col-9 border-0" id="img-upload">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            
-                <!-- post cards -->
-                <div class="container mt-2">
-                    <img class="card card-img-top" src="assets/images/readme/mexican.png" alt="Card image cap">
-                    
-                    </div>
-                    <div class="card-body text-right">
-                        <a href="#" id="icon-heart">
-                            <i class="fas fa-heart"></i>
-                        </a>
-                        <a href="#" id="icon-comment" data-toggle="modal" data-tar>
-                            <i class="fas fa-comment"></i>
-                        </a>
-                    </div>
-                    <div class="text-center" id="comments-container">
+                <!-- cards section -->
 
-                </div>
+                <!-- /cards section -->
             </div>
 
             <div class="tab-pane fade container" id="friends" role="tabpanel" aria-labelledby="friends-tab">
@@ -123,8 +85,31 @@
         <br>
         <br>
         <p>Copyright © MexIcan 2018</p>
-        
+
     </footer> -->
+
+    <!-- post something/modal -->
+    <div class="modal fade" id="modal-port-something" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal-post-something">Post something...</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <textarea class="form-control mb-1" rows="1" placeholder="Say something..." id="modal-description"></textarea>
+                    <div class="custom-file btn-sm btn col-3 text-center mt-1">
+                        <input type="file" class="" id="browse-img">
+                        <label class="col-12 mt-1 mb-0" for="browse-img" id="label-browse-img">Photo</label>
+                    </div>
+                    <button type="button" class="btn mt-1" data-dismiss="modal" id="post">Post</button>
+                    <img class="col-9 border-0" id="img-upload">
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <!--If it is needed delete the files and add boostrap CDN to go to procution-->
