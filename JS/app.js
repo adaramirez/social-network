@@ -47,7 +47,9 @@ $(document).ready(function() {
     // post button
     $("#post").click(getDataPost);
 
+    $("#add-button").click(getCommentPost);
 
+});
 
 // post's variables
 var templateCard =  '<div class="card container mb-2 mt-2">' +
@@ -88,6 +90,9 @@ function addPost(description, srcPost) {
 }
 
 
+
+
+
 var templateComment =   '<nav class="col-6 nav nav-pills nav-justified">' +
                             '<a class="col-4 nav-item nav-link" href="#">' +
                                 '<img class="img-fluid rounded-circle" src="assets/images/profile.png" alt="" id="profile-comment">' +
@@ -107,10 +112,9 @@ var templateComment =   '<nav class="col-6 nav nav-pills nav-justified">' +
                         '</div>';
 
 function getCommentPost(){
-    var comment = $("#modal-comment").val();
+    var comment = $("#comment").val();
     addComment(comment);
-
-    $("#modal-comment").val("");
+    $("#comment").val("");
 };
 
 function addComment (comment){
@@ -148,6 +152,3 @@ function deleteComment(){
 
     container.remove();
 }
-
-
-
