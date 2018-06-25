@@ -33,3 +33,37 @@ a.nav-item.nav-link{
     text-align: center;
 }
 
+/* buttons for photo and post */
+.btn {
+    background-color:#e2318b;
+}
+
+/* navbar options  */
+#home-tab{
+    color: black;
+}
+
+#home-tab:hover{
+    background-color: #ccce01;
+    color: white;
+}
+
+#friends-tab{
+    color: black;
+}
+
+#friends-tab:hover{
+    background-color: #52bfd3;
+    color: white;
+}
+
+#travel-tab{
+    color:black;
+}
+
+#travel-tab:hover{
+    background-color: #fcc513;
+    color: white;
+}
+
+
