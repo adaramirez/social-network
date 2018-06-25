@@ -5,7 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- fontawesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+        crossorigin="anonymous">
     <!-- bootstrap -->
     <link rel="stylesheet" href="css/assets/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
@@ -13,7 +14,6 @@
 </head>
 
 <body>
-
     <header class="container-fluid">
         <nav class="nav nav-pills nav-justified">
             <a class="nav-item nav-link" href="#">
@@ -45,7 +45,8 @@
                 <!-- post something -->
                 <div class="post container">
                     <!-- post -->
-                    <textarea class="form-control mt-2 mb-1" type="button" placeholder="Post something..." rows="1" data-toggle="modal" data-target="#modal-port-something" id="post-something"></textarea>
+                    <textarea class="form-control mt-2 mb-1" type="button" placeholder="Post something..." rows="1" data-toggle="modal" data-target="#modal-port-something"
+                        id="post-something"></textarea>
                 </div>
                 <!-- cards section -->
                 <div class="card-post-container" id="card-post-cont">
@@ -108,6 +109,61 @@
             </div>
         </div>
     </div>
+    </main>
+
+    <!-- <footer class="footer">
+        <br>
+        <br>
+        <p>Copyright © MexIcan 2018</p>
+
+    </footer> -->
+
+    <!--MODALS-->
+    <!--Modal to comment the picture/text posted-->
+    <div class="modal" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!--Modal Header-->
+                <div class="modal-header">
+                    <h5>name</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!--Modal body-->
+
+                <div id="post-section" class="modal-body">
+                    <div class="form-group">
+                        <textarea class="form-control" rows="2" id="comment" name="text" placeholder="What are you thinking?"></textarea>
+                    </div>
+                </div>
+
+                <!--Modal footer-->
+                <div class="modal-footer">
+                    <button id="add-button" type="submit" class="btn btn-danger" data-dismiss="modal">Add</button>
+                    <!-- post something/modal -->
+                    <div class="modal fade" id="modal-port-something" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="modal-post-something">Post something...</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <textarea class="form-control mb-1" rows="1" placeholder="Say something..." id="modal-description"></textarea>
+                                    <div class="custom-file btn-sm btn col-3 text-center mt-1">
+                                        <input type="file" class="" id="browse-img">
+                                        <label class="col-12 mt-1 mb-0" for="browse-img" id="label-browse-img">Photo</label>
+                                    </div>
+                                    <button type="button" class="btn mt-1" data-dismiss="modal" id="post">Post</button>
+                                    <img class="col-9 border-0" id="img-upload">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
 
 
     <!-- <footer class="footer">
@@ -120,16 +176,17 @@
     <!--If it is needed delete the files and add boostrap CDN to go to procution-->
     <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
 
-    <!-- jQuery (nedded for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
-    <!-- firebase -->
-    <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase.js"></script>
-    <!-- bootstrap js -->
-    <script type="text/javascript" src="js/assets/bootstrap.min.js"></script>
+                    <!-- jQuery (nedded for Bootstrap's JavaScript plugins) -->
+                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
-    <!-- js -->
-    <script type="text/javascript" src="js/app.js"></script>
+                    <!-- firebase -->
+                    <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase.js"></script>
+                    <!-- bootstrap js -->
+                    <script type="text/javascript" src="js/assets/bootstrap.min.js"></script>
+
+                    <!-- js -->
+                    <script type="text/javascript" src="js/app.js"></script>
 </body>
 
 </html>
