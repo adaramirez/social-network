@@ -67,7 +67,7 @@ function addPost (description,srcPost){
     var finalTemplate = "";
     finalTemplate = templateCard.replace("__image-post__",srcPost)
                                 .replace("__description__",description);
-    $('main').append(finalTemplate);
+    $('#card-post-cont').append(finalTemplate);
     // swal("YEI!", "Contact added!", "success");
 }
 
