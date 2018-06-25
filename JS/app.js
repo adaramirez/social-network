@@ -85,12 +85,12 @@ var templateComment =   '<nav class="col-6 nav nav-pills nav-justified">' +
                             '<a class="nav-item nav-link text-dark" href="#">Name</a>' +
                         '</nav>'+
                         '<div class="row">'+
-                            '<span id="the-comment">__comment__</span>' +
+                            '<span class="col-10" id="the-comment">__comment__</span>' +
                             '<div class="col-1 p-0 card-body text-right">' +
                                 '<a href="#" id="icon-heart">' +
                                     '<i class="fas fa-heart"></i>' +
                                 '</a>' +
-                                '<a href="#" id="icon-delete" data-toggle="modal" data-tar>' +
+                                '<a href="#" id="icon-delete" data-toggle="modal" data-tar onClick="deleteComment()">' +
                                     '<i class="fas fa-trash-alt"></i>' +
                                 '</a>' +
                             '</div>'+
@@ -107,7 +107,42 @@ function addComment (comment){
     var lastTemplate = "";
     lastTemplate = templateComment.replace("__comment__", comment);
     $('#comments-container').append(lastTemplate);
+    $('#comments-container').attr('id','new_id')
+    // $('#comments-container').attr('id','id_new');
+    //     for (i=1; i<=100; i++)
+    //     div(id="comments-container"+i)
+
 };
+
+// var trash = document.getElementById('icon-delete');
+
+// trash.addEventListener('click',function(){
+//     if (trash.clicked){
+//         comment-container.removeChild(comment)
+//     }
+// })
+
+// function deleteComment(){
+//     $("#delete-icon").on("click",function(){
+//         var commentContainer = $('comment-container')
+//         .on("click",function(){$(this).remove()});
+//     });
+// };
+
+function deleteComment(){
+    var item = $(event.currentTarget);
+    var cardBody = item.parent();
+    var cardRow = cardBody.parent();
+    var container = cardRow.parent();
+
+
+    container.remove();
+}
+
+
+
+
+
   
 
 
