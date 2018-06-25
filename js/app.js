@@ -19,9 +19,15 @@ $('#btn-google').click(function() {
         .signInWithPopup(provider)
         .then(function(result) {
             var infoUser = result.user;
-            console.log(result.user);
+            window.location.href = "../views/home.html"
 
-            window.location.href = "../index.html"
+            var name = infoUser.displayName;
+            var email = infoUser.email;
+            var photoPerfil = infoUser.photoURL;
+
+            $('#nameUser').append( name);
+            $('#profile-photo').append("<img class="img-fluid rounded-circle" src= "+ photoPerfil + alt="" id="profile-photo">");
+
         })
 });
 
@@ -47,13 +53,15 @@ $(document).ready(function() {
     // post button
     $("#post").click(getDataPost);
 
+    $("#add-button").click(getCommentPost);
 
+});
 
 // post's variables
 var templateCard =  '<div class="card container mb-2 mt-2">' +
                         '<nav class="col-6 nav nav-pills nav-justified">'+
                             '<a class="col-4 nav-item nav-link" href="#">'+
-                                '<img class="img-fluid rounded-circle" src="assets/images/profile.png" alt="" id="profile-photo">'+
+                                '<img class="img-fluid rounded-circle" src="../assets/images/profile.png" alt="" id="profile-photo">'+
                             '</a>'+
                             '<a class="nav-item nav-link text-dark" href="#">Name</a>'+
                         '</nav>'+
@@ -84,13 +92,11 @@ function addPost(description, srcPost) {
     finalTemplate = templateCard.replace("__image-post__", srcPost)
         .replace("__description__", description);
     $('#card-post-cont').append(finalTemplate);
-    // swal("YEI!", "Contact added!", "success");
 }
-
 
 var templateComment =   '<nav class="col-6 nav nav-pills nav-justified">' +
                             '<a class="col-4 nav-item nav-link" href="#">' +
-                                '<img class="img-fluid rounded-circle" src="assets/images/profile.png" alt="" id="profile-comment">' +
+                                '<img class="img-fluid rounded-circle" src="../assets/images/profile.png" alt="" id="profile-comment">' +
                             '</a>' +
                             '<a class="nav-item nav-link text-dark" href="#">Name</a>' +
                         '</nav>'+
@@ -107,10 +113,9 @@ var templateComment =   '<nav class="col-6 nav nav-pills nav-justified">' +
                         '</div>';
 
 function getCommentPost(){
-    var comment = $("#modal-comment").val();
+    var comment = $("#comment").val();
     addComment(comment);
-
-    $("#modal-comment").val("");
+    $("#comment").val("");
 };
 
 function addComment (comment){
@@ -118,36 +123,12 @@ function addComment (comment){
     lastTemplate = templateComment.replace("__comment__", comment);
     $('#comments-container').append(lastTemplate);
     $('#comments-container').attr('id','new_id')
-    // $('#comments-container').attr('id','id_new');
-    //     for (i=1; i<=100; i++)
-    //     div(id="comments-container"+i)
-
 };
-
-// var trash = document.getElementById('icon-delete');
-
-// trash.addEventListener('click',function(){
-//     if (trash.clicked){
-//         comment-container.removeChild(comment)
-//     }
-// })
-
-// function deleteComment(){
-//     $("#delete-icon").on("click",function(){
-//         var commentContainer = $('comment-container')
-//         .on("click",function(){$(this).remove()});
-//     });
-// };
 
 function deleteComment(){
     var item = $(event.currentTarget);
     var cardBody = item.parent();
     var cardRow = cardBody.parent();
     var container = cardRow.parent();
-
-
     container.remove();
 }
-
-
-
