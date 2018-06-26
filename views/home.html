@@ -17,91 +17,103 @@
 </head>
 
 <body>
-    <header class="container-fluid">
-        <nav class="nav nav-pills nav-justified">
-            <a class="nav-item nav-link" href="#">
-                <img class="img-fluid rounded-circle" src="" alt="profile" id="profile-photo">
-            </a>
-            <a class="nav-item nav-link" href="#" id="nameUser">Name</a>
-            <a class="nav-item nav-link" href="#">Logo </a>
-            <a class="nav-item nav-link" href="#">Backpacker</a>
-        </nav>
-    </header>
 
-    <section class="container-fluid">
-        <ul class="nav nav-tabs" id="myTab" role="tablist">
-            <li class="nav-item">
-                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" id="friends-tab" data-toggle="tab" href="#friends" role="tab" aria-controls="friends" aria-selected="false">Friends</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" id="travel-tab" data-toggle="tab" href="#travel" role="tab" aria-controls="travel" aria-selected="false">Travel</a>
-            </li>
-        </ul>
-
-        <!-- divs with the different views -->
-        <div class="tab-content" id="myTabContent">
-            <!-- home -->
-            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                <!-- post something -->
-                <div class="post container">
-                    <!-- post -->
-                    <textarea class="form-control mt-2 mb-1" type="button" placeholder="Post something..." rows="1" data-toggle="modal" data-target="#modal-port-something" id="post-something"></textarea>
-                </div>
-                <!-- cards section -->
-                <div class="card-post-container" id="card-post-cont">
-
-                </div>
-                <!-- /cards section -->
+    <div id="login-splash" class="container mt-3" >
+        <div class="card" id="color-card">
+            <img id="logo-login" class="card-img-top" src="../assets/images/style/MexicanLogo.png">
+            <div class="card-body">
+            <h5 class="card-title">Login</h5>
+            <a type="button"  class="btn btn-warning text-dark" id="btn-google">Sign in with Google <i class="fab fa-google"></i> </a>
             </div>
+        </div>
+    </div>
+
+    <main id="home-cont" style="display:none;">
+        <header class="container-fluid">
+            <nav class="nav nav-pills nav-justified">
+                <a class="nav-item nav-link" href="#">
+                    <img class="img-fluid rounded-circle" src="" alt="profile" id="profile-photo">
+                </a>
+                <a class="nav-item nav-link" href="#" id="nameUser"></a>
+                <a class="nav-item nav-link" href="#"> <img class="card-img-top" src="../assets/images/style/MexicanLogo.png" alt=""> </a>
+                <a class="nav-item nav-link" href="#">Backpacker</a>
+            </nav>
+        </header>
+
+        <section class="container-fluid">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="friends-tab" data-toggle="tab" href="#friends" role="tab" aria-controls="friends" aria-selected="false">Friends</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="travel-tab" data-toggle="tab" href="#travel" role="tab" aria-controls="travel" aria-selected="false">Travel</a>
+                </li>
+            </ul>
+
+            <!-- divs with the different views -->
+            <div class="tab-content" id="myTabContent">
+                <!-- home -->
+                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                    <!-- post something -->
+                    <div class="post container">
+                        <!-- post -->
+                        <textarea class="form-control mt-2 mb-1" type="button" placeholder="Post something..." rows="1" data-toggle="modal" data-target="#modal-port-something" id="post-something"></textarea>
+                    </div>
+                    <!-- cards section -->
+                    <div class="card-post-container" id="card-post-cont">
+
+                    </div>
+                    <!-- /cards section -->
+                </div>
 
 
-            <div class="tab-pane fade container" id="friends" role="tabpanel" aria-labelledby="friends-tab">
-                <h4 class="text-right">Friends: 0</h4>
-                <!-- cards friend's information -->
-                <div class="row">
-                    <div class="card mt-2 mr-3 ml-3 col-5 text-right">
-                        <a class="mt-2" href="#">
-                            <i class="fas fa-times-circle"></i>
-                        </a>
-                        <a href="#" id="cont-photo-profile">
-                            <img class="rounded-circle card-img-top" src="../assets/images/profile.png" alt="Card image cap" id="profile-photo">
-                        </a>
-                        <hr>
-                        <div class="card-body p-0 text-left">
-                            <a href="#">
-                                <i class="fas fa-envelope"></i>
+                <div class="tab-pane fade container" id="friends" role="tabpanel" aria-labelledby="friends-tab">
+                    <h4 class="text-right">Friends: 1</h4>
+                    <!-- cards friend's information -->
+                    <div class="row">
+                        <div class="card mt-2 mr-3 ml-3 col-5 text-right">
+                            <a class="mt-2" href="#">
+                                <i class="fas fa-times-circle"></i>
                             </a>
-                            <a href="tel:+523318894178">
-                                <i class="fas fa-phone"></i>
+                            <a href="#" id="cont-photo-profile">
+                                <img class="rounded-circle card-img-top" src="../assets/images/profile.png" alt="Card image cap" id="profile-photo">
                             </a>
-                            <div class="row">
-                                <h5 class="card-text" id="nameUser">Name</h5>
-                                <p class="category-backpacker-turist ml-3 mt-2">Backpacker</p>
+                            <hr>
+                            <div class="card-body p-0 text-left">
+                                <a href="marcos.llamas@gmail.com">
+                                    <i class="fas fa-envelope"></i>
+                                </a>
+                                <a href="tel:+523318894178">
+                                    <i class="fas fa-phone"></i>
+                                </a>
+                                <div class="row">
+                                    <h5 class="card-text" id="nameUser">Marcos</h5>
+                                    <p class="category-backpacker-turist ml-3 mt-2">Backpacker</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="tab-pane fade" id="travel" role="tabpanel" aria-labelledby="travel-tab">
-                <div id="chartdiv"></div>
-                <br>
-                <br>
-                <div class="container-fluid" id="main-sponsors">
-                    <ul class="sponsors">
-                        <li><img src="../assets/images/travel/aeromexico.png" alt="aeromexicoLogo"></li>
-                        <li><img src="../assets/images/travel/volaris.png" alt="volaris"></li>
-                        <li><img src="../assets/images/travel/mexicoLogo.png" alt="mexicoLogo"></li>
-                        <li><img src="../assets/images/travel/pueblos-magicos-logo.png" alt="magicTowns"></li>
-                        <li><img src="../assets/images/travel/letsTravel.png" alt="Let's travel all"></li>
-                    </ul>
+                <div class="tab-pane fade" id="travel" role="tabpanel" aria-labelledby="travel-tab">
+                    <div id="chartdiv"></div>
+                    <br>
+                    <br>
+                    <div class="container-fluid" id="main-sponsors">
+                        <ul class="sponsors">
+                            <li><img src="../assets/images/travel/aeromexico.png" alt="aeromexicoLogo"></li>
+                            <li><img src="../assets/images/travel/volaris.png" alt="volaris"></li>
+                            <li><img src="../assets/images/travel/mexicoLogo.png" alt="mexicoLogo"></li>
+                            <li><img src="../assets/images/travel/pueblos-magicos-logo.png" alt="magicTowns"></li>
+                            <li><img src="../assets/images/travel/letsTravel.png" alt="Let's travel all"></li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-    </section>
-
+        </section>
+    </main>
 
 
     <!--MODALS-->
@@ -182,11 +194,13 @@
     <!-- js -->
     <script type="text/javascript" src="../js/app_home.js"></script>
 
+
     
     <script type="text/javascript" src="../js/map.js"></script>
 
   
     
 </body>
+
 
 </html>
