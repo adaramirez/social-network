@@ -1,3 +1,38 @@
+// Initialize Firebase
+var config = {
+    apiKey: "AIzaSyDwCaomDJgBm4WeP2l-bG3Pi3w9qmm_Tug",
+    authDomain: "social-network-turism.firebaseapp.com",
+    databaseURL: "https://social-network-turism.firebaseio.com",
+    projectId: "social-network-turism",
+    storageBucket: "social-network-turism.appspot.com",
+    messagingSenderId: "162849485241"
+};
+firebase.initializeApp(config);
+
+var dbFB = firebase.database().ref().child('post');
+
+
+// autenticacion
+var provider = new firebase.auth.GoogleAuthProvider();
+// src dominios autorizados https://stackoverflow.com/questions/48076968/firebase-auth-unauthorized-domain-domain-is-not-authorized
+$('#btn-google').click(function() {
+    firebase.auth()
+        .signInWithPopup(provider)
+        .then(function(result) {
+            var email = result.user.email;
+            var name = result.user.displayName;
+            var img = result.user.photoURL;
+            console.log(email,name,img);
+            console.log(result);
+            $('#profile-photo').attr('src',img);
+            $('#nameUser').text(name);
+            
+            $("#login-splash").css("display","none");
+            $("#home-cont").show();
+
+        })
+});
+
 
 $(document).ready(function() {
     // upload image to post
@@ -98,3 +133,5 @@ function deleteComment(){
     var container = cardRow.parent();
     container.remove();
 }
+
+

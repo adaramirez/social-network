@@ -11,6 +11,7 @@ firebase.initializeApp(config);
 
 var dbFB = firebase.database().ref().child('post');
 
+
 // autenticacion
 var provider = new firebase.auth.GoogleAuthProvider();
 // src dominios autorizados https://stackoverflow.com/questions/48076968/firebase-auth-unauthorized-domain-domain-is-not-authorized
