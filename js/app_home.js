@@ -15,39 +15,38 @@ var dbFB = firebase.database().ref().child('post');
 // autenticacion
 var provider = new firebase.auth.GoogleAuthProvider();
 // src dominios autorizados https://stackoverflow.com/questions/48076968/firebase-auth-unauthorized-domain-domain-is-not-authorized
-$('#btn-google').click(function() {
+$('#btn-google').click(function () {
     firebase.auth()
         .signInWithPopup(provider)
-        .then(function(result) {
+        .then(function (result) {
             var email = result.user.email;
             var name = result.user.displayName;
             var img = result.user.photoURL;
-            console.log(email,name,img);
-            console.log(result);
-            $('#profile-photo').attr('src',img);
+
+            $('#profile-photo').attr('src', img);
             $('#nameUser').text(name);
-            
-            $("#login-splash").css("display","none");
+
+            $("#login-splash").css("display", "none");
             $("#home-cont").show();
 
         })
 });
 
 
-$(document).ready(function() {
+$(document).ready(function () {
     // upload image to post
     // attribute for the image route
     function browseImage(inputPhoto) {
         if (inputPhoto.files && inputPhoto.files[0]) {
             var reader = new FileReader();
-            reader.onload = function(e) {
+            reader.onload = function (e) {
                 $('#img-upload').attr('src', e.target.result);
             }
             reader.readAsDataURL(inputPhoto.files[0]);
         }
     }
     //show the picture
-    $("#browse-img").change(function() {
+    $("#browse-img").change(function () {
         browseImage(this);
     });
 
@@ -59,27 +58,27 @@ $(document).ready(function() {
 });
 
 // post's variables
-var templateCard =  '<div class="card container mb-2 mt-2">' +
-                        '<nav class="col-6 nav nav-pills nav-justified">'+
-                            '<a class="col-4 nav-item nav-link" href="#">'+
-                                '<img class="img-fluid rounded-circle" src="../assets/images/profile.png" alt="" id="profile-photo">'+
-                            '</a>'+
-                            '<a class="nav-item nav-link text-dark" href="#">Name</a>'+
-                        '</nav>'+
-                        '<img class="card card-img-top" src="__image-post__" alt="Card image cap">' +
-                        '<div class="card-body text-right">' +
-                            '<a href="#" id="icon-heart">' +
-                                '<i class="fas fa-heart"></i>' +
-                            '</a>' +
-                            '<a href="#" id="icon-comment" data-toggle="modal" data-target="#myModal">' +
-                                '<i class="fas fa-comment"></i>' +
-                            '</a>' +
-                        '</div>' +
-                        '<span id="description-photo" class="font-weight-bold">__description__</span>'+
-                        '<div class="container" id="comments-container"></div>' +
-                    '</div>';
+var templateCard = '<div class="card container mb-2 mt-2">' +
+    '<nav class="col-6 nav nav-pills nav-justified">' +
+    '<a class="col-4 nav-item nav-link" href="#">' +
+    '<img class="img-fluid rounded-circle" src="../assets/images/profile.png" alt="" id="profile-photo">' +
+    '</a>' +
+    '<a class="nav-item nav-link text-dark" href="#">Name</a>' +
+    '</nav>' +
+    '<img class="card card-img-top" src="__image-post__" alt="Card image cap">' +
+    '<div class="card-body text-right">' +
+    '<a href="#" id="icon-heart">' +
+    '<i class="fas fa-heart"></i>' +
+    '</a>' +
+    '<a href="#" id="icon-comment" data-toggle="modal" data-target="#myModal">' +
+    '<i class="fas fa-comment"></i>' +
+    '</a>' +
+    '</div>' +
+    '<span id="description-photo" class="font-weight-bold">__description__</span>' +
+    '<div class="container" id="comments-container"></div>' +
+    '</div>';
 
-function getDataPost(){
+function getDataPost() {
     var description = $("#modal-description").val();
     var srcPost = $("#img-upload").attr('src');
     addPost(description, srcPost);
@@ -95,38 +94,38 @@ function addPost(description, srcPost) {
     $('#card-post-cont').append(finalTemplate);
 }
 
-var templateComment =   '<nav class="col-6 nav nav-pills nav-justified">' +
-                            '<a class="col-4 nav-item nav-link" href="#">' +
-                                '<img class="img-fluid rounded-circle" src="../assets/images/profile.png" alt="" id="profile-comment">' +
-                            '</a>' +
-                            '<a class="nav-item nav-link text-dark" href="#">Name</a>' +
-                        '</nav>'+
-                        '<div class="row">'+
-                            '<span class="col-10" id="the-comment">__comment__</span>' +
-                            '<div class="col-1 p-0 card-body text-right">' +
-                                '<a href="#" id="icon-heart">' +
-                                    '<i class="fas fa-heart"></i>' +
-                                '</a>' +
-                                '<a href="#" id="icon-delete" data-toggle="modal" data-tar onClick="deleteComment()">' +
-                                    '<i class="fas fa-trash-alt"></i>' +
-                                '</a>' +
-                            '</div>'+
-                        '</div>';
+var templateComment = '<nav class="col-6 nav nav-pills nav-justified">' +
+    '<a class="col-4 nav-item nav-link" href="#">' +
+    '<img class="img-fluid rounded-circle" src="../assets/images/profile.png" alt="" id="profile-comment">' +
+    '</a>' +
+    '<a class="nav-item nav-link text-dark" href="#">Name</a>' +
+    '</nav>' +
+    '<div class="row">' +
+    '<span class="col-10" id="the-comment">__comment__</span>' +
+    '<div class="col-1 p-0 card-body text-right">' +
+    '<a href="#" id="icon-heart">' +
+    '<i class="fas fa-heart"></i>' +
+    '</a>' +
+    '<a href="#" id="icon-delete" data-toggle="modal" data-tar onClick="deleteComment()">' +
+    '<i class="fas fa-trash-alt"></i>' +
+    '</a>' +
+    '</div>' +
+    '</div>';
 
-function getCommentPost(){
+function getCommentPost() {
     var comment = $("#comment").val();
     addComment(comment);
     $("#comment").val("");
 };
 
-function addComment (comment){
+function addComment(comment) {
     var lastTemplate = "";
     lastTemplate = templateComment.replace("__comment__", comment);
     $('#comments-container').append(lastTemplate);
-    $('#comments-container').attr('id','new_id')
+    $('#comments-container').attr('id', 'new_id')
 };
 
-function deleteComment(){
+function deleteComment() {
     var item = $(event.currentTarget);
     var cardBody = item.parent();
     var cardRow = cardBody.parent();
