@@ -2,8 +2,10 @@
 
 # SOCIAL NETWORK - MEX I CAN 
 
+# MOBILE ONLY
 * **Students:** Dulce Lemus & Ada Ramirez
 * **Module:** 6 Make Your Own Social Network
+
 
 ABOUT THE FINAL PROJECT
 

@@ -8,8 +8,12 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
     <!-- bootstrap -->
     <link rel="stylesheet" href="../css/assets/bootstrap.min.css">
+    <!-- LOCAL CSS -->
     <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/travel.css">
     <title>SOCIAL NETWORK</title>
+    <!--ANIMATED MAPS-->
+    <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
 </head>
 
 <body>
@@ -82,12 +86,26 @@
                 </div>
             </div>
 
-            <div class="tab-pane fade" id="travel" role="tabpanel" aria-labelledby="travel-tab">...</div>
+            <div class="tab-pane fade" id="travel" role="tabpanel" aria-labelledby="travel-tab">
+                <div id="chartdiv"></div>
+                <br>
+                <br>
+                <div class="container-fluid" id="main-sponsors">
+                    <ul class="sponsors">
+                        <li><img src="../assets/images/travel/aeromexico.png" alt="aeromexicoLogo"></li>
+                        <li><img src="../assets/images/travel/volaris.png" alt="volaris"></li>
+                        <li><img src="../assets/images/travel/mexicoLogo.png" alt="mexicoLogo"></li>
+                        <li><img src="../assets/images/travel/pueblos-magicos-logo.png" alt="magicTowns"></li>
+                        <li><img src="../assets/images/travel/letsTravel.png" alt="Let's travel all"></li>
+                    </ul>
+                </div>
+            </div>
     </section>
 
 
 
     <!--MODALS-->
+
     <!--Modal to comment the picture/text posted-->
     <div class="modal" id="myModal">
         <div class="modal-dialog">
@@ -154,9 +172,21 @@
     <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase.js"></script>
     <!-- bootstrap js -->
     <script type="text/javascript" src="../js/assets/bootstrap.min.js"></script>
-
+    
+    <!-- ANIMATED MAPS-->
+    <script src="https://www.amcharts.com/lib/3/ammap.js"></script>
+    <script src="https://www.amcharts.com/lib/3/maps/js/worldLow.js"></script>
+    <script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
+    <script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+    
     <!-- js -->
     <script type="text/javascript" src="../js/app_home.js"></script>
+
+    
+    <script type="text/javascript" src="../js/map.js"></script>
+
+  
+    
 </body>
 
 </html>
